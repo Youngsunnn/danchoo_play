@@ -1,0 +1,7 @@
+extends base
+
+block content
+    form(method="POST")
+        input(name="userId", placeholder="ID", required, type="text", minlength="11", maxlength="11")
+        input(name="userPw", placeholder="Password", required, type="text", minlength="4", maxlength="4")
+        input(type="submit", value="login")

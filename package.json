@@ -1,0 +1,30 @@
+{
+  "name": "danchoo",
+  "version": "1.0.0",
+  "description": "web project for the play - 말걸음 : 발걸음 : 마주걸음",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Youngsunnn/danchoo_play.git"
+  },
+  "author": "Youngsun Chung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Youngsunnn/danchoo_play/issues"
+  },
+  "homepage": "https://github.com/Youngsunnn/danchoo_play#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.0",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "nodemon": "^2.0.15"
+  }
+}
