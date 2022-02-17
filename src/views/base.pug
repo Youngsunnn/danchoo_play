@@ -1,13 +1,34 @@
 doctype html
 html(lang="ko")
     head
-        title #{pageTitle}
+        title #{pageTitle} | #{siteName}
         link(rel="stylesheet" href="https://unpkg.com/mvp.css")
     body
         header
             h1=pageTitle
-            block homeUpload
-
+            nav 
+                ul
+                    li
+                        a(href="/") Home
+                    if !loggedIn
+                        li
+                            a(href="/login") Login
+                    else 
+                        li
+                            a(href="/logout") Logout
+                    if loggedInAdmin
+                        li
+                            a(href="/admin/upload/audio") Upload Audio
+                        li
+                            a(href="/admin/upload/user") Upload User
+                        li
+                            a(href="/admin/upload/image") Upload Image
+                    if loggedInButton
+                        li
+                            a(href="/admin/checkmedia") Check Media
+                        li
+                            a(href="/admin/checkselection") Check Selection
+                    else
         main
             block content
     include partials/footer.pug

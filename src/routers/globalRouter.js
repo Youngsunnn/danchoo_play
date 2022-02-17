@@ -1,10 +1,11 @@
 import express from "express";
-import {login} from "../controllers/userController";
+import {getLogin, postLogin, logout} from "../controllers/userController";
 import {home} from "../controllers/pageController";
 
 const globalRouter = express.Router();
 
 globalRouter.get("/", home);
-globalRouter.get("/login", login);
+globalRouter.route("/login").get(getLogin).post(postLogin);
+globalRouter.get("/logout", logout);
 
 export default globalRouter;

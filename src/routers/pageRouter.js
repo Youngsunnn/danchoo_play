@@ -1,9 +1,9 @@
-import express from "express";
-import {watch} from "../controllers/pageController";
+// import express from "express";
+// import {piece, choice} from "../controllers/pageController";
 
-const pageRouter = express.Router();
+// const pageRouter = express.Router();
 
-pageRouter.get("/:id([0-9a-f]{24})", watch);
-pageRouter.route("/upload").get(getUpload).post(postUpload);
+// pageRouter.get("/:name([0~9]{8})"), piece);
+// pageRouter.get("/choice/:name([0~9]{8})"), choice);
 
-export default pageRouter;
+// export default pageRouter;
