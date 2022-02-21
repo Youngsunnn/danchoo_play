@@ -3,6 +3,7 @@ import "./db";
 import Audio from "./models/Audio";
 import User from "./models/User";
 import Image from "./models/Image";
+import UserImage from "./models/UserImage";
 import app from "./server";
 
 const PORT = 5000;

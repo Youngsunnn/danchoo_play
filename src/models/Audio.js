@@ -3,7 +3,8 @@ import mongoose from "mongoose";
 const audioSchema = new mongoose.Schema({
     title: {type: String, required: true, trim: true},
     createdAt: {type: Date, required: true, default: Date.now },
-    contentURL: {type: String, required: true, trim: true},
+    nextone: {type: String, required: true, trim: true},
+    fileUrl: {type: String, required: true, trim: true},
 });
 
 

@@ -26,7 +26,7 @@ export const publicOnlyMiddleware = (req, res, next) => {
 };
 
 export const OnlyButtonMiddleware = (req, res, next) => {
-    if(req.session.user.phoneNum === "button"){
+    if(req.session.user.phoneNum === "danchoo"){
         next();
     } else {
         return res.render("404", {pageTitle: "403: Access Denied"})

@@ -1,0 +1,7 @@
+extends mediabase
+
+block content
+    audio(src= `/${mediaFile[0].fileUrl}`, autoplay, controls class="media")
+    div(align="right")
+        a(href=`/page/${mediaFile[0].nextone}`,)
+            img(src="/uploads/images/165acd41b83dda54baacf5445c4838ae" width="15%")

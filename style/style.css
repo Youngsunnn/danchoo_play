@@ -1,0 +1,36 @@
+@font-face {
+  font-family: "KoPubDotumMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background-color: #efefef;
+  font-family: "KoPubDotumMedium";
+}
+h1 {
+  text-align: center;
+}
+
+.selectbutton {
+  margin-bottom: 5%;
+  border: 0.2px #050505;
+}
+
+.nextbutton {
+  margin-bottom: 10%;
+}
+
+.mainimage {
+  margin-bottom: 10%;
+}
+
+.userimageform {
+  margin-bottom: 10%;
+}
+
+.media {
+  margin-bottom: 10%;
+}

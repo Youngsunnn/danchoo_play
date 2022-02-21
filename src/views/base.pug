@@ -8,15 +8,13 @@ html(lang="ko")
             h1=pageTitle
             nav 
                 ul
-                    li
-                        a(href="/") Home
-                    if !loggedIn
+                    if loggedInAdmin
                         li
                             a(href="/login") Login
-                    else 
                         li
                             a(href="/logout") Logout
-                    if loggedInAdmin
+                        li
+                            a(href="/") Home
                         li
                             a(href="/admin/upload/audio") Upload Audio
                         li

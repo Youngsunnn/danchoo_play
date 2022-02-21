@@ -1,0 +1,10 @@
+extends mediabase
+
+block content
+    form(method="POST", enctype="multipart/form-data" class="userimageform")
+        label(for="userimages") Upload Files
+        input(type="file", id="userimages" name="userimages")
+        input(type="submit")
+    div(align="right" class="nextbutton")
+        a(href='/page/media/4',)
+            img(src="/uploads/images/165acd41b83dda54baacf5445c4838ae" width="15%")

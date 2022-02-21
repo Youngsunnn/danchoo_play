@@ -4,7 +4,7 @@ import session from "express-session";
 import MongoStore from "connect-mongo";
 import adminRouter from "./routers/adminRouter";
 import globalRouter from "./routers/globalRouter";
-// import pageRouter from "./routers/pageRouter";
+import pageRouter from "./routers/pageRouter";
 import { localsMiddleware } from "./middleware";
 // import 순서 지켜야 한다..!
 
@@ -17,13 +17,13 @@ app.use(logger);
 app.use(express.urlencoded({extended:true}));
 
 app.use(session({
-    secret: "a3k4ls6d47j8ka5826171sv1c108b1m23vm8ee4ld6kgl24567ksdfkj",
+    secret: process.env.COOKIE_SECRET,
     resave: false,
     saveUninitialized: false,
     cookie: {
         maxAge: 10800000,
     },
-    store: MongoStore.create({mongoUrl:"mongodb://127.0.0.1:27017/danchoo"})
+    store: MongoStore.create({mongoUrl:process.env.DB_URL})
 })
 );
 app.use((req, res, next) => {
@@ -32,8 +32,10 @@ app.use((req, res, next) => {
     });
 });
 app.use(localsMiddleware);
+app.use("/uploads", express.static("uploads"));
+app.use("/style", express.static("style"));
 app.use("/", globalRouter);
 app.use("/admin", adminRouter);
-// app.use("/page", pageRouter);
+app.use("/page", pageRouter);
 
 export default app;

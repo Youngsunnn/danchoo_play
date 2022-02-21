@@ -1,0 +1,10 @@
+mixin userImage(userImage)
+    div
+        img(src=`/${userImage.fileUrl}`, width="50%")
+        p=userImage.username
+
+mixin userPath(user)
+    div
+        p=user.username
+        p=user.paths
+        hr

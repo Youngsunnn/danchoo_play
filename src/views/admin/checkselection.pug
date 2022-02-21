@@ -1,1 +1,6 @@
 extends ../base
+include mixin
+
+block content
+    each i in user 
+        +userPath(i)
