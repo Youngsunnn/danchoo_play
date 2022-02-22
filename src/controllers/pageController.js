@@ -15,22 +15,25 @@ export const media = async(req, res) => {
         return res.render('404', {pageTitle: "404: 존재하지 않는 페이지입니다."});
     }
     const username = req.session.user.username;
-    const currentPath = req.session.user.paths;
-    const updatedUser = await User.findOneAndUpdate(username,
-        {
-            paths: currentPath + title + ", ",
-        });
-    req.session.user=updatedUser;
+    // const currentPath = req.session.user.paths;
+    // const updatedUser = await User.findOneAndUpdate(username,
+    //     {
+    //         paths: currentPath + title + ", ",
+    //     });
+    // req.session.user=updatedUser;
     return res.render("media/media", {pageTitle:"말걸음 : 발걸음 : 마주걸음", mediaFile});
 };
 
-export const mediaintro = async(req, res) => {
-    const title = req.params.name;
-    const media = await Audio.find({title});
-    if(!media) {
-        return res.render('404', {pageTitle: "404: 존재하지 않는 페이지입니다."});
-    }
-    return res.render("media/greeting", {pageTitle:"말걸음 : 발걸음 : 마주걸음", media});
+export const gethello = (req, res) => {
+    return res.render("instruction", {pageTitle: "안내사항"});
+};
+
+export const getintro1 = (req, res) => {
+    return res.render("intro1", {pageTitle: "Intro"});
+};
+
+export const getintro2 = (req, res) => {
+    return res.render("intro2", {pageTitle: "Intro"});
 };
 
 export const choice = (req, res) => {

@@ -3,30 +3,30 @@ html(lang="ko")
     head
         title #{pageTitle} | #{siteName}
         link(rel="stylesheet" href="https://unpkg.com/mvp.css")
+        link(rel="stylesheet" href="../style/style.css")
+        meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
     body
-        header
-            h1=pageTitle
-            nav 
-                ul
-                    if loggedInAdmin
-                        li
-                            a(href="/login") Login
-                        li
-                            a(href="/logout") Logout
-                        li
-                            a(href="/") Home
-                        li
-                            a(href="/admin/upload/audio") Upload Audio
-                        li
-                            a(href="/admin/upload/user") Upload User
-                        li
-                            a(href="/admin/upload/image") Upload Image
-                    if loggedInButton
-                        li
-                            a(href="/admin/checkmedia") Check Media
-                        li
-                            a(href="/admin/checkselection") Check Selection
-                    else
+        //- nav 
+        //-     ul
+        //-         if loggedInAdmin
+        //-             li
+        //-                 a(href="/login") Login
+        //-             li
+        //-                 a(href="/logout") Logout
+        //-             li
+        //-                 a(href="/") Home
+        //-             li
+        //-                 a(href="/admin/upload/audio") Upload Audio
+        //-             li
+        //-                 a(href="/admin/upload/user") Upload User
+        //-             li
+        //-                 a(href="/admin/upload/image") Upload Image
+        //-         if loggedInButton
+        //-             li
+        //-                 a(href="/admin/checkmedia") Check Media
+        //-             li
+        //-                 a(href="/admin/checkselection") Check Selection
+        //-         else
         main
             block content
     include partials/footer.pug

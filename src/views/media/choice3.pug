@@ -1,12 +1,9 @@
-extends base 
+extends ../base 
 
 block content
     center
-        div(class="selectbutton")
-            a(href="/page/media/5-1") 1
-        div(class="selectbutton")
-            a(href="/page/media/5-2") 2
-        div(class="selectbutton")
-            a(href="/page/media/5-3") 3
-        div(class="selectbutton")
-            a(href="/page/media/5-4") 4
+        div(class="topmargin")
+        div(class="selectbutton" onclick="location.href='/page/media/5-1'") 1
+        div(class="selectbutton" onclick="location.href='/page/media/5-2'") 2
+        div(class="selectbutton" onclick="location.href='/page/media/5-3'") 3
+        div(class="selectbutton" onclick="location.href='/page/media/5-4'") 4

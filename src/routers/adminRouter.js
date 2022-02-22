@@ -6,7 +6,7 @@ const adminRouter = express.Router();
 
 adminRouter.route("/upload/audio").get(getUpload).post(uploadAudio.single("audios"), postUpload);
 adminRouter.route("/upload/image").get(getImgUpload).post(uploadImage.single("images"), postImgUpload);
-adminRouter.route("/upload/user").get(getUserUpload).post(postUserUpload);
+adminRouter.route("/upload/user").all(OnlyAdminMiddleware).get(getUserUpload).post(postUserUpload);
 adminRouter.route("/checkmedia").get(OnlyButtonMiddleware, checkmedia);
 adminRouter.route("/checkselection").get(OnlyButtonMiddleware, checkselection);
 

@@ -9,18 +9,62 @@
 body {
   background-color: #efefef;
   font-family: "KoPubDotumMedium";
+  color: #555555;
 }
 h1 {
   text-align: center;
 }
 
-.selectbutton {
-  margin-bottom: 5%;
-  border: 0.2px #050505;
+h3 {
+  margin-bottom: 10%;
 }
 
-.nextbutton {
+footer {
+  position: absolute;
+  left: 2px;
+  bottom: 0px;
+  font-size: small;
+  color: #555555;
+}
+
+.buttonimage {
+  width: 50%;
+}
+
+.selectbutton {
   margin-bottom: 10%;
+  width: 50%;
+  height: 60px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dddddd;
+  background-color: #e0e0e0;
+  text-align: center;
+  line-height: 60px;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.loginbutton {
+  margin-top: 20%;
+  width: 40%;
+  height: 40px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dddddd;
+  background-color: #e0e0e0;
+  text-align: center;
+  line-height: 40px;
+  font-size: medium;
+  font-weight: bold;
+}
+
+.topmargin {
+  height: 80px;
+}
+
+.margin1 {
+  height: 115px;
 }
 
 .mainimage {
@@ -32,5 +76,39 @@ h1 {
 }
 
 .media {
-  margin-bottom: 10%;
+  margin-top: 20%;
+  margin-bottom: 5%;
+  width: 80%;
+}
+
+.nextbutton {
+  position: absolute;
+  bottom: 80px;
+  right: 20px;
+  width: 15%;
+}
+
+.loginform {
+  margin-bottom: 5%;
+}
+
+.instructionbox {
+  width: 90%;
+  height: 100px;
+  border-color: #555555;
+  margin-bottom: 5%;
+}
+
+.changebutton {
+  margin-top: 10%;
+  width: 40%;
+  height: 40px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dddddd;
+  background-color: #e0e0e0;
+  text-align: center;
+  line-height: 40px;
+  font-size: medium;
+  font-weight: bold;
 }
