@@ -1,3 +1,4 @@
+import "regenerator-runtime";
 import "dotenv/config";
 import "./db";
 import Audio from "./models/Audio";

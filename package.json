@@ -4,6 +4,8 @@
   "description": "web project for the play - 말걸음 : 발걸음 : 마주걸음",
   "main": "index.js",
   "scripts": {
+    "start": "node build/init.js",
+    "build": "babel src -d build",
     "dev": "nodemon --exec babel-node src/init.js"
   },
   "repository": {
