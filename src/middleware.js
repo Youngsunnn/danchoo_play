@@ -1,4 +1,33 @@
 import multer from "multer";
+import multerS3 from "multer-s3";
+import aws from "aws-sdk"
+
+const s3 = new aws.S3({
+    credentials: {
+        accessKeyId: process.env.AWS_ID,
+        secretAccessKey: process.env.AWS_SECRET
+    }
+});
+
+// const isHeroku = process.env.NODE_ENV === "production";
+
+const s3ImageUploader = multerS3({
+    s3: s3,
+    bucket: 'danchoo/images',
+    acl: "public-read",
+});
+
+const s3AudioUploader = multerS3({
+    s3: s3,
+    bucket: 'danchoo/audios',
+    acl: "public-read",
+});
+
+const s3UserImageUploader = multerS3({
+    s3: s3,
+    bucket: 'danchoo/userimages',
+    acl: "public-read",
+});
 
 export const localsMiddleware = (req, res, next) => {
     res.locals.loggedIn = Boolean(req.session.loggedIn);
@@ -41,6 +70,17 @@ export const OnlyAdminMiddleware = (req, res, next) => {
     }
 }
 
-export const uploadAudio = multer({ dest: "uploads/audios" });
-export const uploadImage = multer({ dest: "uploads/images" });
-export const uploadImgbyUser = multer({ dest: "uploads/users/images" });
+export const uploadAudio = multer({
+    dest: "uploads/audios",
+    storage: s3AudioUploader,
+});
+
+export const uploadImage = multer({
+    dest: "uploads/images",
+    storage: s3ImageUploader,
+});
+
+export const uploadImgbyUser = multer({
+    dest: "uploads/users/images",
+    storage: s3UserImageUploader,
+});

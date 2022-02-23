@@ -14,7 +14,7 @@ export const postUpload = async (req, res) => {
         await Audio.create({
             title,
             nextone,
-            fileUrl: file.path,
+            fileUrl: file.location,
         });
         return res.render("admin/uploadaudio", {pageTitle: "Upload Audio"});
     } catch (error){
@@ -33,7 +33,7 @@ export const postImgUpload = async (req, res) => {
     try{
         await Image.create({
             title,
-            fileUrl: file.path,
+            fileUrl: file.location,
         })
         return res.render("admin/uploadimg", {pageTitle: "Upload Image"})
     } catch (error) {

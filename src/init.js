@@ -7,7 +7,7 @@ import Image from "./models/Image";
 import UserImage from "./models/UserImage";
 import app from "./server";
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 const handleListening = () =>
 console.log(`Server listening on port http://localhost:${PORT}🚀`);

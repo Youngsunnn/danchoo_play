@@ -60,7 +60,7 @@ export const postUserImg = async (req, res) => {
     try{
         await UserImage.create({
             username,
-            fileUrl: file.path,
+            fileUrl: file.location,
         })
     } catch(error){
         console.log(error);
