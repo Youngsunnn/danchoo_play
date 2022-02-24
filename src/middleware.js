@@ -71,16 +71,16 @@ export const OnlyAdminMiddleware = (req, res, next) => {
 }
 
 export const uploadAudio = multer({
-    dest: "uploads/audios",
+    // dest: "uploads/audios",
     storage: s3AudioUploader,
 });
 
 export const uploadImage = multer({
-    dest: "uploads/images",
+    // dest: "uploads/images",
     storage: s3ImageUploader,
 });
 
 export const uploadImgbyUser = multer({
-    dest: "uploads/users/images",
+    // dest: "uploads/users/images",
     storage: s3UserImageUploader,
 });
