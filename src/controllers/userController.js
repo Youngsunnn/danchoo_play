@@ -2,9 +2,6 @@ import User from "../models/User";
 
 
 export const getLogin = (req,res) => {
-    if(req.session) {
-        res.redirect("/page/hello")
-    }
     res.render("login", {pageTitle: "Login"})
 };
 
