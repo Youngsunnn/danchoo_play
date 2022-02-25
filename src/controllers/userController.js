@@ -1,7 +1,12 @@
 import User from "../models/User";
 
 
-export const getLogin = (req,res) => res.render("login", {pageTitle: "Login"});
+export const getLogin = (req,res) => {
+    if(req.session) {
+        res.redirect("/page/hello")
+    }
+    res.render("login", {pageTitle: "Login"})
+};
 
 export const postLogin = async (req,res) => {
     const {username, phoneNum} = req.body;
