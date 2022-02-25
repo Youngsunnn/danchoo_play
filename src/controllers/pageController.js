@@ -64,7 +64,7 @@ export const postUserImg = async (req, res) => {
         })
     } catch(error){
         console.log(error);
-        return res.status(400).render('media/upload', {pageTitle:'Upload Image'})
+        return res.status(400).render('media/upload', {pageTitle:'Upload Image', errorMessage:'업로드 오류가 발생했습니다. 에러가 반복되면 산책이 끝난 후 관리자에게 문의해주세요.'})
     }
-    return res.render('media/upload', {pageTitle:'Upload Image'})
+    return res.render('media/upload', {pageTitle:'Upload Image', errorMessage:'업로드 성공!'})
 }

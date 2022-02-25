@@ -1,6 +1,8 @@
 extends mediabase
 
 block content
+    if errorMessage
+        span=errorMessage
     form(method="POST", enctype="multipart/form-data" class="userimageform")
         label(for="userimages") Upload Files
         input(type="file", id="userimages" name="userimages")
