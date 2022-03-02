@@ -6,9 +6,8 @@ block content
 
         form(method="POST" class="loginform")
             input(name="username", placeholder="이름", required, type="text")
-            input(name="phoneNum", placeholder="전화번호", required, type="text")
+            input(name="phoneNum", placeholder="코드", required, type="text")
             input(type="submit", value="Login")
-            p 전화번호는 숫자만 입력해주세요
         if errorMessage
             span=errorMessage
 
