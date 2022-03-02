@@ -10,9 +10,12 @@ export const home = (req, res) => {
 export const media = async(req, res) => {
     const title = req.params.name;
     const mediaFile = await Audio.find({title});
-    console.log(mediaFile)
     if(!mediaFile) {
         return res.render('404', {pageTitle: "404: 존재하지 않는 페이지입니다."});
+    }
+    const fifthMedia = ["5-1", "5-2", "5-3", "5-4"];
+    if(fifthMedia.includes(title)) {
+        return res.render("media/5thmedia", {pageTitle: "말걸음: 발걸음 : 마주걸음", mediaFile});
     }
     const username = req.session.user.username;
     // const currentPath = req.session.user.paths;

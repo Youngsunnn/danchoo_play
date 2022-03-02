@@ -1,0 +1,6 @@
+extends mediabase
+
+block content
+    audio(src= `${mediaFile[0].fileUrl}`, autoplay, controls, class="media")
+    div(class="changebutton" onclick="location.href='/page/media/outro'") 주파수 변경
+        
