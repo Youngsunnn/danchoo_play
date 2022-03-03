@@ -18,7 +18,7 @@ export const postLogin = async (req,res) => {
     if(!ok){
         return res.status(400).render("login", {
             pageTitle: "Login",
-            errorMessage: "전화번호가 잘못되었습니다."
+            errorMessage: "코드가 잘못되었습니다."
         });
     }
     req.session.loggedIn = true;
