@@ -23,7 +23,7 @@ export const postLogin = async (req,res) => {
     }
     req.session.loggedIn = true;
     req.session.user = user;
-    return res.redirect("/page/hello");
+    return res.redirect("/page/wait");
 };
 
 export const logout = (req,res) => {
