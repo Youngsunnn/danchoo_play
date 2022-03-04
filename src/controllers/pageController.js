@@ -36,7 +36,7 @@ export const getintro1 = (req, res) => {
 };
 
 export const getWait = (req, res) => {
-    return res.render("wait", {pageTitle: "Hello"})
+    return res.render("buffer", {pageTitle: "Hello"})
 };
 
 export const getintro2 = (req, res) => {
