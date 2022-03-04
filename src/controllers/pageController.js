@@ -35,6 +35,10 @@ export const getintro1 = (req, res) => {
     return res.render("intro1", {pageTitle: "Intro"});
 };
 
+export const getWait = (req, res) => {
+    return res.render("wait", {pageTitle: "Hello"})
+};
+
 export const getintro2 = (req, res) => {
     return res.render("intro2", {pageTitle: "Intro"});
 };
